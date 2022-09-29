@@ -26,17 +26,17 @@ import com.example.cupcake.databinding.FragmentPickupBinding
 import com.example.cupcake.model.OrderViewModel
 
 /**
- * [PickupFragment] memungkinkan pengguna untuk memilih tanggal pengambilan untuk pesanan cupcake.
+ * [PickupFragment] digunakan untuk memungkinkan pengguna untuk memilih tanggal pengambilan untuk pesanan cupcake.
  */
 class PickupFragment : Fragment() {
 
 
-    // Mengikat instance objek yang sesuai dengan layout fragment_pickup.xml
+    //Akan menyambungkan instance objek yang sesuai dengan layout fragment_pickup.xml
     // Properti ini bukan nol antara siklus panggilan balik hidup onCreateView() dan onDestroyView(),
     // ketika hierarki tampilan dilampirkan ke fragmen.
     private var binding: FragmentPickupBinding? = null
 
-    // Gunakan delegasi properti Kotlin 'by activityViewModels()' dari artefak fragmen-ktx
+    // Akan menggunakan delegasi properti Kotlin 'by activityViewModels()' dari artefak fragmen-ktx
     private val sharedViewModel: OrderViewModel by activityViewModels()
 
     override fun onCreateView(
@@ -60,14 +60,14 @@ class PickupFragment : Fragment() {
 
 
     /**
-     * Navigasikan ke layar berikutnya untuk melihat ringkasan pesanan.
+     * Akan menavigasikan ke layar berikutnya untuk melihat ringkasan pesanan.
      */
     fun goToNextScreen() {
         findNavController().navigate(R.id.action_pickupFragment_to_summaryFragment)
     }
 
     /**
-     * Metode siklus hidup fragmen ini dipanggil saat hierarki tampilan terkait dengan fragmen
+     * Fragmen ini dipanggil saat hierarki tampilan terkait dengan fragmen
      * sedang dihapus. Akibatnya, bersihkan objek yang mengikat.
      */
     override fun onDestroyView() {
