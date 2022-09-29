@@ -26,7 +26,7 @@ import com.example.cupcake.databinding.FragmentFlavorBinding
 import com.example.cupcake.model.OrderViewModel
 
 /**
- * [FlavorFragment] memungkinkan pengguna untuk memilih rasa cupcake untuk pesanannya.
+ * [FlavorFragment]digunakan untuk  memungkinkan pengguna untuk memilih rasa cupcake untuk pesanannya.
  */
 class FlavorFragment : Fragment() {
 
@@ -64,7 +64,7 @@ class FlavorFragment : Fragment() {
 
 
     /**
-     * Arahkan ke layar berikutnya untuk memilih tanggal pengambilan.
+     *akan  mengarahkan ke layar berikutnya untuk memilih tanggal pengambilan.
      */
     fun goToNextScreen() {
         findNavController().navigate(R.id.action_flavorFragment_to_pickupFragment)
