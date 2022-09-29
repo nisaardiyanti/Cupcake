@@ -26,7 +26,7 @@ import com.example.cupcake.databinding.FragmentStartBinding
 import com.example.cupcake.model.OrderViewModel
 
 /**
- * Ini adalah layar pertama dari aplikasi Cupcake. Pengguna dapat memilih berapa banyak cupcakes yang akan dipesan.
+ * StartFragment merupakan tampilan Layar pertama dari aplikasi Cupcake. Pengguna dapat memilih berapa banyak cupcakes yang akan dipesan.
  */
 class StartFragment : Fragment() {
 
@@ -35,7 +35,7 @@ class StartFragment : Fragment() {
     // ketika hierarki tampilan dilampirkan ke fragmen.
     private var binding: FragmentStartBinding? = null
 
-    // Gunakan delegasi properti Kotlin 'by activityViewModels()' dari artefak fragmen-ktx
+    // Menggunakan  delegasi properti Kotlin 'by activityViewModels()' dari artefak fragmen-ktx
     private val sharedViewModel: OrderViewModel by activityViewModels()
 
     override fun onCreateView(
@@ -53,18 +53,17 @@ class StartFragment : Fragment() {
     }
 
     /**
-     * Mulai pesanan dengan jumlah kue mangkuk yang diinginkan dan navigasikan ke layar berikutnya.
+     *kan  memulai pesanan dengan jumlah kue  yang diinginkan dan akan  menavigasikan ke layar berikutnya.
      */
     fun orderCupcake(quantity: Int) {
-        // Update the view model with the quantity
+        //Akan Memperbarui model tampilan dengan kuantitas
         sharedViewModel.setQuantity(quantity)
 
-        // If no flavor is set in the view model yet, select vanilla as default flavor
+       // Jika belum ada rasa yang diatur dalam model tampilan, pilih vanila sebagai rasa default
         if (sharedViewModel.hasNoFlavorSet()) {
             sharedViewModel.setFlavor(getString(R.string.vanilla))
         }
-
-        // Navigate to the next destination to select the flavor of the cupcakes
+//Akan mengarahkan ke halaman berikutnya untuk memilih rasa cupcakes
         findNavController().navigate(R.id.action_startFragment_to_flavorFragment)
     }
 
