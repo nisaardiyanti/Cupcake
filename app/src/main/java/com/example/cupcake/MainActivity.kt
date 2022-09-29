@@ -23,19 +23,19 @@ import androidx.navigation.ui.setupActionBarWithNavController
 
 
 /**
- * Aktivitas untuk alur pesanan cupcake.
+ * Aktivitas ini akan mengarahkan untuk alur pesanan cupcake.
  */
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Ambil NavController dari NavHostFragment
+        // Akan mengambil NavController dari NavHostFragment
         val navHostFragment = supportFragmentManager
                 .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
 
-        // Siapkan bilah tindakan untuk digunakan dengan NavController
+        //  uSETUPAction akan digunakan dengan NavController
         setupActionBarWithNavController(navController)
     }
 }
