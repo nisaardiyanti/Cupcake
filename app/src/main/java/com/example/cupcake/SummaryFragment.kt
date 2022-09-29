@@ -61,7 +61,7 @@ class SummaryFragment : Fragment() {
 
 
     /**
-     * Kirim pesanan dengan membagikan detail pesanan ke aplikasi lain melalui maksud implisit.
+     * Mengirim pesanan dengan membagikan detail pesanan ke aplikasi lain melalui maksud implisit.
      */
     fun sendOrder() {
         Toast.makeText(activity, "Send Order", Toast.LENGTH_SHORT).show()
